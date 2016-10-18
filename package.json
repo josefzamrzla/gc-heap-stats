@@ -1,18 +1,24 @@
 {
   "name": "gc-heap-stats",
   "version": "0.0.1",
-  "description": "todo",
+  "description": "Emits stats about V8 heap usage after each GC run",
   "main": "index.js",
   "engines": {
-    "node" : ">=0.12"
+    "node": ">=0.12"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/josefzamrzla/gc-heap-stats.git"
   },
   "keywords": [
-    "todo"
+    "gc",
+    "v8",
+    "heap",
+    "garbage collection"
   ],
   "author": "Josef Zamrzla",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bindings": "^1.2.1"
+  }
 }

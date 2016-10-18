@@ -45,10 +45,6 @@ namespace gc_heap_stats {
         stats->Set(String::NewFromUtf8(isolate, "used_heap_size"), Number::New(isolate, step->heapStats.used_heap_size()));
         stats->Set(String::NewFromUtf8(isolate, "heap_size_limit"), Number::New(isolate, step->heapStats.heap_size_limit()));
 
-        #if NODE_MAJOR_VERSION >= 6
-        stats->Set(String::NewFromUtf8(isolate, "does_zap_garbage"), Number::New(isolate, step->heapStats.does_zap_garbage()));
-        #endif
-
         #if NODE_MAJOR_VERSION >= 3
         Local<Array> spaces = Array::New(isolate);
         
@@ -93,12 +89,6 @@ namespace gc_heap_stats {
         diff->Set(
             String::NewFromUtf8(isolate, "heap_size_limit"), 
             Number::New(isolate, static_cast<double>(after->heapStats.heap_size_limit()) - static_cast<double>(before->heapStats.heap_size_limit())));
-
-        #if NODE_MAJOR_VERSION >= 6
-        diff->Set(
-            String::NewFromUtf8(isolate, "does_zap_garbage"), 
-            Number::New(isolate, static_cast<double>(after->heapStats.does_zap_garbage()) - static_cast<double>(before->heapStats.does_zap_garbage())));
-        #endif
 
         #if NODE_MAJOR_VERSION >= 3
         Local<Array> spaces = Array::New(isolate);
