@@ -35,25 +35,24 @@ gcHeapStats.start();
 
 ## Sample output
 
-Sample output in node.js >= 4.0 (there won't be "spaces" array in older versions of node.js).
+Sample output in node.js >= 4.0 (there won't be _spaces[]_ stats in older versions of node.js).
  
-The output contains 3 sections: heap stats before GC was triggered, heap stats after GC run and the diff.
+The output contains 3 sections: heap stats _before_ GC run was triggered, heap stats _after_ GC run and the _diff_ (after - before).
 
 Top level properties:
-
 * type: type of GC (can have one of the following values):
  * 1: Scavenge (minor GC)
  * 2: Mark/Sweep/Compact (major GC)
  * 4: Incremental marking
  * 8: Weak/Phantom callback processing
  * 15: All
-* took: GC pause in milliseconds
+* took: milliseconds that GC run took
 
 Section properties:
 * total_heap_size: Number of bytes V8 has allocated for the heap. This can grow if usedHeap needs more.
 * used_heap_size: Number of bytes in used by application data
 * total_heap_size_executable: Number of bytes for compiled bytecode and JITed code
-* heap_size_limit: The absolute limit the heap cannot exceed (--max_old_space_size)
+* heap_size_limit: The absolute limit the heap cannot exceed (default limit or --max_old_space_size)
 * total_physical_size: Committed size
  
 Heap space properties:
