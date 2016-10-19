@@ -1,7 +1,7 @@
 {
   "name": "gc-heap-stats",
   "version": "0.0.2",
-  "description": "Emits stats about V8 heap usage after each GC run",
+  "description": "Emits detailed stats about V8 heap usage after each V8 garbage collector run",
   "main": "index.js",
   "engines": {
     "node": ">=0.12"
