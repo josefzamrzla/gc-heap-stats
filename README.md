@@ -1,6 +1,6 @@
 # gc-heap-stats
 
-Emits stats about V8 heap usage after each GC run.
+Emits detailed stats about V8 heap usage after each V8 garbage collector run.
 
 ## Install
 ```bash
@@ -37,7 +37,7 @@ gcHeapStats.start();
 
 Sample output in node.js >= 4.0 (there won't be _spaces[]_ stats in older versions of node.js).
  
-The output contains 3 sections: heap stats _before_ GC run was triggered, heap stats _after_ GC run and the _diff_ (after - before).
+The output contains 3 sections: heap stats _before_ garbage collector run was triggered, heap stats _after_ garbage collector run and the _diff_ (after - before).
 
 Top level properties:
 * type: type of GC (can have one of the following values):
