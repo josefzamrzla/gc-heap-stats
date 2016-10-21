@@ -1,5 +1,7 @@
 # gc-heap-stats
 
+[![Build Status](https://travis-ci.org/josefzamrzla/gc-heap-stats.svg?branch=master)](https://travis-ci.org/josefzamrzla/gc-heap-stats)
+
 Emits detailed stats about V8 heap usage after each V8 garbage collector run.
 
 ## Install
