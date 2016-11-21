@@ -6,6 +6,9 @@
   "engines": {
     "node": ">=0.12"
   },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --expose-gc ./test.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/josefzamrzla/gc-heap-stats.git"
@@ -20,5 +23,9 @@
   "license": "ISC",
   "dependencies": {
     "bindings": "^1.2.1"
+  },
+  "devDependencies": {
+    "mocha": "^3.1.2",
+    "semver": "^5.3.0"
   }
 }
